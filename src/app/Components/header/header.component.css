@@ -1,0 +1,131 @@
+header {
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+}
+
+.form-control {
+    border-radius: 3px;
+    width: 600px;
+    margin-left: 20px;
+}
+
+.input {
+    position: relative;
+}
+
+.input .search-icon {
+    position: absolute;
+    z-index: 10;
+    right: 12px;
+    bottom: 8px;
+    color: #0e0eaf;
+}
+
+.navbar .headText {
+    font-size: 30px;
+}
+
+.togglesearch {
+    background: #e8e8e4;
+    position: absolute;
+    top: 74px;
+    right: 8%;
+    width: 350px;
+    line-height: 60px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-top: 4px solid #d80b15;
+    display: none;
+}
+
+.togglesearch:before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    right: 13px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid #d80b15;
+}
+
+.togglesearch input[type="text"] {
+    width: 258px;
+    padding: 5px 10px;
+    /* margin-left: 23px; */
+    margin: 5px;
+    border: 1px solid #d80b15;
+    outline: none;
+}
+
+.togglesearch input[type="button"] {
+    width: 80px;
+    padding: 5px 0;
+    background: #d80b15;
+    color: #fff;
+    margin-left: -6px;
+    border: 1px solid #d80b15;
+    outline: none;
+    cursor: pointer;
+}
+
+@media (max-width: 991px) {
+    .form-control {
+        width: 400px;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 791px) {
+    .form-control {
+        width: 300px;
+    }
+}
+
+@media (max-width: 691px) {
+    .form-control {
+        width: 250px;
+    }
+}
+
+@media (max-width: 591px) {
+    .form-control {
+        width: 180px;
+    }
+}
+
+@media (max-width: 491px) {
+    .form-control {
+        width: 150px;
+    }
+}
+
+@media (max-width: 468px) {
+    .form-control {
+        display: none;
+    }
+    .search-icon {
+        display: none !important;
+    }
+    .navbar .headText {
+        font-size: 20px;
+    }
+    .fa-shipping-fast {
+        font-size: 25px !important;
+    }
+}
+
+@media (min-width: 468px) {
+    .searchbar {
+        display: none;
+    }
+}
+
+@media (max-width: 391px) {
+    .togglesearch {
+        width: 310px;
+    }
+    .togglesearch input[type="text"] {
+        width: 220px;
+    }
+}

@@ -1,0 +1,35 @@
+<header>
+    <div class="navbar navbar-dark bg-primary shadow-sm" style="padding: 6px 10px">
+        <div class="navbar-brand align-item-center d-flex">
+            <i style="font-size: 40px" class="fas fa-shipping-fast">&nbsp; </i>
+            <strong class="headText">Flipkart</strong>
+            <div class="form-group">
+                <div class="input">
+                    <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search products" />
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <button class="searchbar btn btn-danger" (click)="showInput()">
+        <i class="fa fa-search searchDataForMobile" aria-hidden="true"></i>
+        <div class="togglesearch">
+          <input
+            type="text"
+            placeholder=""
+            [(ngModel)]="searchTerm"
+            placeholder="search products"
+          />
+          <input type="button" value="Search" (click)="search($event)" />
+        </div>
+      </button>
+            <button routerLink="cart" class="btn btn-primary">
+        <i style="font-size: 30px" class="fas fa-cart-plus"></i>
+        <div style="font-size: 10px" class="badge bg-danger">
+          {{ totalItem }}
+        </div>
+      </button>
+        </div>
+    </div>
+</header>
